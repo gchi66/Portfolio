@@ -13,10 +13,39 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: beige;
+  }
+
+  &::before {
+    top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
+    bottom: -0.3em;
+    left: 10em;
+    right: 10em;
+  }
+
+  &::after{
+    left: -0.3em;
+    right: -0.3em;
+    top: 10em;
+    bottom: 10em;
+  }
 }
 
 .basic-info {
+  margin-top: 150px;
+  margin-left: 50px;
+  z-index: 1;
+}
 
+.list-container {
+  margin-top: 150px;
+  margin-left: 50px;
 }
 
 .content-right {
@@ -55,7 +84,8 @@
 /* Control the left side */
 .left {
   left: 0;
-  background-color: blue;
+  background-color: beige;
+  padding-left: 20px;
 }
 
 /* Control the right side */
