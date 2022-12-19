@@ -1,2 +1,34 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class = "page-container">
+
+  <%# left side of screen %>
+    <div class ="split left">
+      <h1>Grant Chichester</h1>
+        <h4>Web Developer</h4>
+          <%# List items that will dissapear with JS when clicked %>
+          <ul>
+            <li id="toggleItem">About</li>
+            <li id="toggleItemOne">Projects</li>
+            <li id="toggleItemTwo">Contact</li>
+          </ul>
+
+    </div>
+
+  <%# right side of screen %>
+    <div class="split right">
+      <div class="content-right">
+
+      <%# About me section %>
+        <div class = "about">
+          <p>Hello my name is grant</p>
+        </div>
+      <%# Projects section %>
+        <div class = "projects">
+          <p>here will be the links to my projects</p>
+        </div>
+      <%# Contact section  %>
+        <div class = "contact">
+          <p>here will be my contact info</p>
+        </div>
+      </div>
+    </div>
+</div>

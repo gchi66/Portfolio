@@ -1,1 +1,65 @@
 // Specific CSS for your home-page
+
+.page-container {
+  // border-left: 15px solid black;
+  // border-right: 15px solid black;
+  // border-top: 15px solid black;
+  // border-bottom:  15px solid black;
+  border: 5px solid  black;
+  width: 1000px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.basic-info {
+
+}
+
+.content-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.links-container {
+
+}
+
+.about {
+  display: none;
+}
+
+.projects {
+  display: none;
+}
+
+.contact {
+  display: none;
+}
+
+.split {
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: blue;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: red;
+}
