@@ -10,29 +10,33 @@ const about = document.querySelector('.about');
 const projects = document.querySelector('.projects');
 const contact = document.querySelector('.contact');
 
-
 toggleItem.addEventListener('click', () => {
-  console.log("hello");
- if(about.style.display === 'none') {
-  about.style.display = 'block';
- } else {
-  about.style.display = 'none';
- }
+  if(about.style.display === 'none') {
+    about.style.display = 'block';
+    projects.style.display = 'none';
+    contact.style.display = 'none';
+   }
+   else {
+   about.style.display = 'none';
+
+   }
 });
 
 toggleItemOne.addEventListener('click', () => {
-  console.log("hello");
   if(projects.style.display === 'none') {
     projects.style.display = 'block';
+    about.style.display = 'none';
+    contact.style.display = 'none';
    } else {
     projects.style.display = 'none';
    }
 });
 
 toggleItemTwo.addEventListener('click', () => {
-  console.log("hello");
   if(contact.style.display === 'none') {
     contact.style.display = 'block';
+    about.style.display = 'none';
+    projects.style.display = 'none';
    } else {
     contact.style.display = 'none';
    }

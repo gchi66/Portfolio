@@ -48,17 +48,22 @@
   margin-left: 50px;
 }
 
+
 .content-right {
   position: absolute;
   bottom: 0;
   right: 0;
+  padding: 25px;
 }
 
 .links-container {
 
 }
 
+li { cursor: pointer; }
+
 .about {
+  background-color: transparent;
   display: none;
 }
 
@@ -69,6 +74,11 @@
 .contact {
   display: none;
 }
+
+// .about:active {
+//   display: block;
+//   background-color: red;
+// }
 
 .split {
   box-sizing: border-box;
@@ -91,5 +101,5 @@
 /* Control the right side */
 .right {
   right: 0;
-  background-color: red;
+  background-color: red
 }
