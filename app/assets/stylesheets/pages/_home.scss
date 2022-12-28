@@ -1,1 +1,108 @@
 // Specific CSS for your home-page
+
+
+.page-container {
+  border: 5px solid  black;
+  width: 1000px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  //the four corners border
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: beige;
+  }
+
+  &::before {
+    top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
+    bottom: -0.3em;
+    left: 10em;
+    right: 10em;
+  }
+
+  &::after{
+    left: -0.3em;
+    right: -0.3em;
+    top: 10em;
+    bottom: 10em;
+  }
+}
+
+.basic-info {
+  margin-top: 150px;
+  margin-left: 50px;
+  z-index: 1;
+}
+
+.list-container {
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+
+.content-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 25px;
+}
+
+.links-container {
+
+}
+
+li { cursor: pointer; }
+
+.about {
+  background-color: transparent;
+  display: none;
+}
+
+.projects {
+  display: none;
+}
+
+.contact {
+  display: none;
+}
+
+// .about:active {
+//   display: block;
+//   background-color: red;
+// }
+
+.split {
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: beige;
+  padding-left: 20px;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: beige;
+}
+
+::selection {
+  color: none;
+  background: none;
+}
