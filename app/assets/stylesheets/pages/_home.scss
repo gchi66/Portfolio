@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 
-
+//the basic page container: splits the page in half
 .page-container {
   border: 5px solid  black;
   width: 1000px;
@@ -35,30 +35,27 @@
   }
 }
 
-.basic-info {
-  margin-top: 150px;
-  margin-left: 50px;
+// splits the page in half
+.split {
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
   z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding: 20px;
+  position: relative;
 }
 
-.list-container {
-  margin-top: 150px;
-  margin-left: 50px;
+
+//Left side
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: beige;
+  padding-left: 20px;
 }
-
-
-.content-right {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 25px;
-}
-
-.links-container {
-
-}
-
-li { cursor: pointer; }
 
 .about {
   background-color: transparent;
@@ -73,34 +70,113 @@ li { cursor: pointer; }
   display: none;
 }
 
-// .about:active {
-//   display: block;
-//   background-color: red;
+.basic-info {
+  margin-top: 150px;
+  margin-left: 50px;
+  z-index: 1;
+}
+
+.list-container {
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+
+// #toggleItem {
+//   opacity: 1;
+  // -webkit-transition: all 0.5s ease-in-out;
+  // -moz-transition: all 0.5s ease-in-out;
+  // -ms-transition: all 0.5s ease-in-out;
+  // -o-transition: all 0.5s ease-in-out;
+//   transition: all 0.5s ease-in-out;
 // }
 
-.split {
-  box-sizing: border-box;
-  height: 100%;
-  width: 50%;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding: 20px;
-  position: relative;
+.hidden {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-/* Control the left side */
-.left {
-  left: 0;
-  background-color: beige;
-  padding-left: 20px;
+.visible {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
+
+
+
+
+// Right side
 
 /* Control the right side */
 .right {
   right: 0;
   background-color: beige;
 }
+
+
+// content inside of the right container
+.content-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 25px;
+}
+
+
+.links-container {
+
+}
+
+
+li { cursor: pointer; }
+
+
+
+// .fade-out-text {
+//   animation: fadeOut 1s;
+//   -webkit-animation: fadeOut 1s;
+//   -moz-animation: fadeOut 1s;
+//   -o-animation: fadeOut 1s;
+//   -ms-animation: fadeOut 1s;
+// }
+
+// @keyframes fadeOut {
+//   100% { opacity: 1; }
+//   0% { opacity: 0; }
+// }
+
+// @-moz-keyframes fadeOut {
+//   100% { opacity: 1; }
+//   0% { opacity: 0; }
+// }
+
+// @-webkit-keyframes fadeOut {
+//   100% { opacity: 1; }
+//   0% { opacity: 0; }
+// }
+
+// @-o-keyframes fadeOut {
+//   100% { opacity: 1; }
+//   0% { opacity: 0; }
+// }
+
+// @-ms-keyframes fadeOut {
+//   100% { opacity: 1; }
+//   0% { opacity: 0; }
+// }
+
+// .abin:active {
+//   display: block;
+//   background-color: red;
+// }
+
 
 ::selection {
   color: none;
