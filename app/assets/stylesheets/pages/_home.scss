@@ -3,7 +3,7 @@
 //the basic page container: splits the page in half
 .page-container {
   border: 5px solid  black;
-  width: 1000px;
+  width: 75%;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -50,46 +50,29 @@
 
 //Left side
 
-/* Control the left side */
 .left {
   left: 0;
   background-color: beige;
   padding-left: 20px;
 }
 
-.about {
-  background-color: transparent;
-  display: none;
-}
-
-.projects {
-  display: none;
-}
-
-.contact {
-  display: none;
-}
 
 .basic-info {
-  margin-top: 150px;
-  margin-left: 50px;
+  margin-top: 25%;
+  margin-left: 15%;
   z-index: 1;
 }
 
 .list-container {
-  margin-top: 150px;
-  margin-left: 50px;
+  margin-top: 35%;
+  margin-left: 15%;
 }
 
+#labels-list li {
+  list-style-type: none;
+  margin-bottom: 5%;
+}
 
-// #toggleItem {
-//   opacity: 1;
-  // -webkit-transition: all 0.5s ease-in-out;
-  // -moz-transition: all 0.5s ease-in-out;
-  // -ms-transition: all 0.5s ease-in-out;
-  // -o-transition: all 0.5s ease-in-out;
-//   transition: all 0.5s ease-in-out;
-// }
 
 .hidden {
   opacity: 0;
@@ -111,71 +94,60 @@
 
 
 
+  // Right side
 
-// Right side
-
-/* Control the right side */
 .right {
   right: 0;
   background-color: beige;
 }
 
+// .content-right {
+  //   position: absolute;
+  //   bottom: 25%;
+  //   right: 20%;
+  //   padding: 25px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-content: center;
+  // }
 
 // content inside of the right container
-.content-right {
+
+#projects > #projects-list li{
+  text-align: left;
+}
+
+#about {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 25%;
+  right: 20%;
+  padding: 25px;
+}
+
+#projects {
+  position: absolute;
+  bottom: 25%;
+  right: 30%;
+  padding: 25px;
+}
+
+#contact {
+  position: absolute;
+  bottom: 25%;
+  right: 20%;
   padding: 25px;
 }
 
 
 #projects-list li {
   list-style-type: none;
+  font-size: 35px;
+  margin-bottom: 5%;
 }
 
 
 li { cursor: pointer; }
-
-
-
-// .fade-out-text {
-//   animation: fadeOut 1s;
-//   -webkit-animation: fadeOut 1s;
-//   -moz-animation: fadeOut 1s;
-//   -o-animation: fadeOut 1s;
-//   -ms-animation: fadeOut 1s;
-// }
-
-// @keyframes fadeOut {
-//   100% { opacity: 1; }
-//   0% { opacity: 0; }
-// }
-
-// @-moz-keyframes fadeOut {
-//   100% { opacity: 1; }
-//   0% { opacity: 0; }
-// }
-
-// @-webkit-keyframes fadeOut {
-//   100% { opacity: 1; }
-//   0% { opacity: 0; }
-// }
-
-// @-o-keyframes fadeOut {
-//   100% { opacity: 1; }
-//   0% { opacity: 0; }
-// }
-
-// @-ms-keyframes fadeOut {
-//   100% { opacity: 1; }
-//   0% { opacity: 0; }
-// }
-
-// .abin:active {
-//   display: block;
-//   background-color: red;
-// }
 
 
 ::selection {
