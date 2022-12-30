@@ -149,6 +149,16 @@
 
 li { cursor: pointer; }
 
+a{
+  text-decoration:none;
+  color: black;
+  }
+
+a:visited {
+  text-decoration:none;
+  color: black;
+}
+
 
 ::selection {
   color: none;
