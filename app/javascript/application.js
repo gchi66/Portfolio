@@ -6,53 +6,49 @@ import "bootstrap"
 const toggleItem = document.querySelector('#toggleItem');
 const toggleItemOne = document.querySelector('#toggleItemOne');
 const toggleItemTwo = document.querySelector('#toggleItemTwo');
-const about = document.querySelector('.about');
-const projects = document.querySelector('.projects');
-const contact = document.querySelector('.contact');
+const about = document.querySelector('#about');
+const projects = document.querySelector('#projects');
+const contact = document.querySelector('#contact');
 
 
 // Showing the stuff on the right side of the screen when you click the list items
   toggleItem.addEventListener('click', (event) => {
     event.preventDefault()
-    if(about.style.display === 'none') {
-      about.style.display = 'block';
-      projects.style.display = 'none';
-      contact.style.display = 'none';
+    if(about.className === 'hidden') {
+      about.className = 'visible';
+      projects.className = 'hidden';
+      contact.className = 'hidden';
     }
     else {
-    about.style.display = 'none';
+      about.className = 'hidden';
     }
-    // if(toggleItem.style.opacity = "1") {
-    //   toggleItem.style.opacity = "0";
-    // }
-    // else {
-    //   toggleItem.style.opacity = "1";
-    //   }
   });
 
 
     toggleItemOne.addEventListener('click', (event) => {
       event.preventDefault()
-    if(projects.style.display === 'none') {
-      projects.style.display = 'block';
-      about.style.display = 'none';
-      contact.style.display = 'none';
+    if(projects.className === 'hidden') {
+      projects.className = 'visible';
+      about.className = 'hidden';
+      contact.className = 'hidden';
     } else {
-      projects.style.display = 'none';
+      projects.className = 'hidden';
     }
   });
 
   toggleItemTwo.addEventListener('click', (event) => {
     event.preventDefault()
-    if(contact.style.display === 'none') {
-      contact.style.display = 'block';
-      about.style.display = 'none';
-      projects.style.display = 'none';
+    if(contact.className === 'hidden') {
+      contact.className = 'visible';
+      about.className = 'hidden';
+      projects.className = 'hidden';
     } else {
-      contact.style.display = 'none';
+      contact.className = 'hidden';
     }
   });
 
+
+  // Fade the li on the left side of the screen in and out
 
   toggleItem.addEventListener("click", (event) => {
     event.preventDefault()
