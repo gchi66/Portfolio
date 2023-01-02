@@ -1,5 +1,26 @@
 // Specific CSS for your home-page
 
+// Background image
+
+// body {
+// background-image: url(background-img.jpg);
+// background-repeat:no-repeat;
+// background-position: center;
+// background-size: cover;
+// display: block;
+// min-height: 100%;
+// }
+
+.background-img  {
+  position: fixed;
+  z-index: 0;
+  left: 37.1%;
+  bottom: 23%;
+  height: 50%;
+}
+
+
+
 // fonts
 h1 {
   font-family: 'Oswald', sans-serif;
@@ -78,11 +99,13 @@ h4 {
 
 .basic-info h1 {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .basic-info h4 {
   margin-left: 2px;
   font-size: 248%;
+  position: relative;
 }
 
 
@@ -117,7 +140,7 @@ h4 {
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 
 
@@ -127,8 +150,9 @@ h4 {
 .right {
   right: 0;
   background-color: black;
-  color: white;
   padding: 25%;
+  position: absolute;
+  z-index: 0;
 }
 
 // .content-right {
@@ -154,6 +178,8 @@ h4 {
   padding: 25px;
   text-align: center;
   width: 75%;
+  color: white;
+  z-index: 1;
 }
 
 #about ul{
@@ -163,6 +189,8 @@ h4 {
 #about p {
   text-align: left;
   font-family: 'Roboto', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 #about li {
@@ -183,9 +211,10 @@ h4 {
 #projects {
   position: absolute;
   bottom: 35%;
-  right: 40%;
+  right: 35%;
   padding: 25px;
   color: white;
+
 }
 
 
