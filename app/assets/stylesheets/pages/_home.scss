@@ -96,6 +96,7 @@ h4 {
   margin-bottom: 5%;
   font-family: 'Roboto', sans-serif;
   font-size: 195%;
+  cursor: pointer;
 }
 
 
@@ -148,16 +149,24 @@ h4 {
 
 #about {
   position: absolute;
-  bottom: 25%;
+  bottom: 5%;
   right: 10%;
   padding: 25px;
   text-align: center;
   width: 75%;
 }
 
+#about ul{
+  padding-left: 0rem;
+}
+
 #about p {
   text-align: left;
   font-family: 'Roboto', sans-serif;
+}
+
+#about li {
+  list-style-type: none;
 }
 
 .profile-pic {
@@ -179,12 +188,14 @@ h4 {
   color: white;
 }
 
+
 #projects-list li {
   list-style-type: none;
   font-size: 275%;
   margin-bottom: 5%;
   font-family: 'Oswald', sans-serif;
   color: white;
+  cursor: pointer;
 }
 
 #projects > #projects-list li{
@@ -219,11 +230,12 @@ h4 {
 
 // a bunch of default shit for links and pointers
 
-li { cursor: pointer; }
+// li { cursor: pointer; }
 
 a{
   text-decoration:none;
   color: white;
+  cursor: pointer;
 }
 
 a:visited {
