@@ -1,9 +1,41 @@
 // Specific CSS for your home-page
 
+// Background image
+
+// body {
+// background-image: url(background-img.jpg);
+// background-repeat:no-repeat;
+// background-position: center;
+// background-size: cover;
+// display: block;
+// min-height: 100%;
+// }
+
+.background-img  {
+  position: fixed;
+  z-index: 0;
+  left: 37.1%;
+  bottom: 23%;
+  height: 50%;
+}
+
+
+
+// fonts
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 375%;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 320;
+}
+
+
 //the basic page container: splits the page in half
 .page-container {
-  border: 5px solid  black;
-  width: 75%;
+  // border: 5px solid  black;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -13,26 +45,26 @@
   position: relative;
 
   //the four corners border
-  &::before, &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    background: beige;
-  }
+  // &::before, &::after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   background: beige;
+  // }
 
-  &::before {
-    top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
-    bottom: -0.3em;
-    left: 10em;
-    right: 10em;
-  }
+  // &::before {
+  //   top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
+  //   bottom: -0.3em;
+  //   left: 10em;
+  //   right: 10em;
+  // }
 
-  &::after{
-    left: -0.3em;
-    right: -0.3em;
-    top: 10em;
-    bottom: 10em;
-  }
+  // &::after{
+  //   left: -0.3em;
+  //   right: -0.3em;
+  //   top: 10em;
+  //   bottom: 10em;
+  // }
 }
 
 // splits the page in half
@@ -52,25 +84,42 @@
 
 .left {
   left: 0;
-  background-color: beige;
+  background-color: white;
   padding-left: 20px;
 }
 
 
 .basic-info {
-  margin-top: 25%;
+  margin-top: 15%;
   margin-left: 15%;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
 
+.basic-info h1 {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.basic-info h4 {
+  margin-left: 2px;
+  font-size: 248%;
+  position: relative;
+}
+
+
 .list-container {
-  margin-top: 35%;
+  margin-top: 20%;
   margin-left: 15%;
 }
 
 #labels-list li {
   list-style-type: none;
   margin-bottom: 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 195%;
+  cursor: pointer;
 }
 
 
@@ -81,6 +130,7 @@
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  z-index: -1;
 }
 
 .visible {
@@ -90,6 +140,7 @@
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  z-index: 2;
 }
 
 
@@ -98,7 +149,10 @@
 
 .right {
   right: 0;
-  background-color: beige;
+  background-color: black;
+  padding: 25%;
+  position: absolute;
+  z-index: 0;
 }
 
 // .content-right {
@@ -114,49 +168,108 @@
 
 // content inside of the right container
 
-#projects > #projects-list li{
-  text-align: left;
-}
+
+// about me section
 
 #about {
   position: absolute;
-  bottom: 25%;
-  right: 20%;
+  bottom: 5%;
+  right: 10%;
   padding: 25px;
+  text-align: center;
+  width: 75%;
+  color: white;
+  z-index: 1;
 }
+
+#about ul{
+  padding-left: 0rem;
+}
+
+#about p {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+#about li {
+  list-style-type: none;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px white solid;
+  margin-bottom: 20px;
+}
+
+// projects section
 
 #projects {
   position: absolute;
-  bottom: 25%;
-  right: 30%;
+  bottom: 35%;
+  right: 35%;
   padding: 25px;
-}
+  color: white;
 
-#contact {
-  position: absolute;
-  bottom: 25%;
-  right: 20%;
-  padding: 25px;
 }
 
 
 #projects-list li {
   list-style-type: none;
-  font-size: 35px;
+  font-size: 275%;
   margin-bottom: 5%;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+#projects > #projects-list li{
+  text-align: left;
+  color: white;
+}
+
+// contact me section
+
+#contact {
+  position: absolute;
+  bottom: 40%;
+  right: 30%;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#contact i {
+  margin-bottom: 40px;
+  size: 300%;
+  margin-right: 20px;
 }
 
 
-li { cursor: pointer; }
+
+
+
+
+
+// a bunch of default shit for links and pointers
+
+// li { cursor: pointer; }
 
 a{
   text-decoration:none;
-  color: black;
-  }
+  color: white;
+  cursor: pointer;
+}
 
 a:visited {
   text-decoration:none;
-  color: black;
+  color: white;
 }
 
 
