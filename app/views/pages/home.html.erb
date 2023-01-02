@@ -4,8 +4,8 @@
     <div class ="split left">
       <div class = "basic-info">
       <%# Name and title container %>
-        <h1>Grant Chichester</h1>
-        <h4>Web Developer</h4>
+        <h1>GRANT CHICHESTER</h1>
+        <h4>Full-Stack Web Developer</h4>
       </div>
 
       <div class = "list-container">
@@ -26,11 +26,11 @@
 
       <%# About me section %>
         <div id = "about" class = "hidden">
+
+            <%= cl_image_tag("https://res.cloudinary.com/dmz2vmnno/image/upload/v1670594282/production/fe4o47khylqf2bd9c24yit0qjksj.jpg", gravity: :face,  class: "profile-pic") %>
+
           <p>A recent graduate of the Le Wagon coding bootcamp in Barcelona, I'm eager to get started on my career as a web developer.</p>
           <p>Originally from Texas, I've lived in Asia (Thailand and China) for the past 7 years.</p>
-          <div class = "my-pic">
-            <%= cl_image_tag("https://res.cloudinary.com/dmz2vmnno/image/upload/v1670594282/production/fe4o47khylqf2bd9c24yit0qjksj.jpg") %>
-          </div>
         </div>
       <%# Projects section %>
         <div id = "projects" class = "hidden">
@@ -41,7 +41,8 @@
         </div>
       <%# Contact section  %>
         <div id = "contact" class = "hidden">
-          <p>here will be my contact info</p>
+          <a href ="https://github.com/gchi66" target= "_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+          <a href ="https://www.linkedin.com/in/gchichester/" target= "_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
         </div>
       </div>
     </div>
