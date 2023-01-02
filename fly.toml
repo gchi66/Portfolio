@@ -1,4 +1,4 @@
-# fly.toml file generated for grant-portfolio on 2022-12-16T16:31:40+01:00
+# fly.toml file generated for grant-portfolio on 2023-01-02T14:11:27+01:00
 
 app = "grant-portfolio"
 kill_signal = "SIGINT"
@@ -19,6 +19,9 @@ processes = []
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
+  cmd = []
+  entrypoint = []
+  exec = []
 
 [[services]]
   http_checks = []
@@ -47,5 +50,7 @@ processes = []
     timeout = "2s"
 
 [[statics]]
+  cache_key = "___app_public"
   guest_path = "/app/public"
+  processes = []
   url_prefix = "/"
