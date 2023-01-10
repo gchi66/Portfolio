@@ -10,15 +10,19 @@
 // display: block;
 // min-height: 100%;
 // }
+@media only screen and (max-width: 80rem) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
 
 .background-img  {
   position: fixed;
   z-index: 0;
-  left: 37.1%;
-  bottom: 23%;
-  height: 50%;
+  left: 44.03%;
+  bottom: 32%;
+  height: 30%;
 }
-
 
 
 // fonts
@@ -85,7 +89,9 @@ h4 {
 .left {
   left: 0;
   background-color: white;
-  padding-left: 20px;
+  padding-left: 2%;
+  padding-right: 5%;
+
 }
 
 
@@ -120,6 +126,13 @@ h4 {
   font-family: 'Roboto', sans-serif;
   font-size: 195%;
   cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 8%;
 }
 
 
@@ -173,7 +186,7 @@ h4 {
 
 #about {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   right: 10%;
   padding: 25px;
   text-align: center;
@@ -191,6 +204,7 @@ h4 {
   font-family: 'Roboto', sans-serif;
   position: relative;
   z-index: 1;
+  font-size: 120%;
 }
 
 #about li {
@@ -203,7 +217,7 @@ h4 {
   border-radius: 50%;
   object-fit: cover;
   border: 5px white solid;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 // projects section
