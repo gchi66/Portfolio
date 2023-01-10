@@ -10,15 +10,32 @@
 // display: block;
 // min-height: 100%;
 // }
+@media only screen and (max-width: 80rem) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 80rem) {
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .show-on-mobile {
+    display: block;
+  }
+}
+
 
 .background-img  {
   position: fixed;
   z-index: 0;
-  left: 37.1%;
-  bottom: 23%;
-  height: 50%;
+  left: 44.03%;
+  bottom: 32%;
+  height: 30%;
 }
-
 
 
 // fonts
@@ -43,28 +60,33 @@ h4 {
   display: flex;
   flex-direction: row;
   position: relative;
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
   //the four corners border
   // &::before, &::after {
-  //   content: '';
-  //   display: block;
-  //   position: absolute;
-  //   background: beige;
-  // }
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   background: beige;
+    // }
 
-  // &::before {
-  //   top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
-  //   bottom: -0.3em;
-  //   left: 10em;
-  //   right: 10em;
-  // }
+    // &::before {
+      //   top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
+      //   bottom: -0.3em;
+      //   left: 10em;
+      //   right: 10em;
+      // }
 
-  // &::after{
-  //   left: -0.3em;
-  //   right: -0.3em;
-  //   top: 10em;
-  //   bottom: 10em;
-  // }
+      // &::after{
+        //   left: -0.3em;
+        //   right: -0.3em;
+        //   top: 10em;
+        //   bottom: 10em;
+        // }
 }
 
 // splits the page in half
@@ -77,6 +99,16 @@ h4 {
   overflow-x: hidden;
   padding: 20px;
   position: relative;
+  @media only screen and (max-width: 800px) {
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding: 20px;
+    position: relative;
+  }
 }
 
 
@@ -85,7 +117,14 @@ h4 {
 .left {
   left: 0;
   background-color: white;
-  padding-left: 20px;
+  padding-left: 2%;
+  padding-right: 5%;
+  @media only screen and (max-width: 800px) {
+    top: 0;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 5%;
+  }
 }
 
 
@@ -122,6 +161,17 @@ h4 {
   cursor: pointer;
 }
 
+.logo {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 8%;
+  @media only screen and (min-width: 80rem) {
+    display: none;
+  }
+}
+
+
 
 .hidden {
   opacity: 0;
@@ -153,6 +203,14 @@ h4 {
   padding: 25%;
   position: absolute;
   z-index: 0;
+  @media only screen and (max-width: 800px) {
+    bottom: 0;
+    top: 50%;
+    background-color: black;
+    padding: 25%;
+    position: absolute;
+    overflow: auto;
+  }
 }
 
 // .content-right {
@@ -173,13 +231,21 @@ h4 {
 
 #about {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   right: 10%;
   padding: 25px;
   text-align: center;
   width: 75%;
   color: white;
   z-index: 1;
+  @media only screen and (max-width: 800px) {
+    position: relative;
+    overflow-block: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    right: 22%;
+    width: 150%;
+  }
 }
 
 #about ul{
@@ -191,6 +257,7 @@ h4 {
   font-family: 'Roboto', sans-serif;
   position: relative;
   z-index: 1;
+  font-size: 120%;
 }
 
 #about li {
@@ -202,8 +269,9 @@ h4 {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: bottom;
   border: 5px white solid;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 // projects section
