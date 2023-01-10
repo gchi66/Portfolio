@@ -16,6 +16,19 @@
   }
 }
 
+@media only screen and (max-width: 80rem) {
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+
 .background-img  {
   position: fixed;
   z-index: 0;
@@ -47,28 +60,33 @@ h4 {
   display: flex;
   flex-direction: row;
   position: relative;
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
   //the four corners border
   // &::before, &::after {
-  //   content: '';
-  //   display: block;
-  //   position: absolute;
-  //   background: beige;
-  // }
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   background: beige;
+    // }
 
-  // &::before {
-  //   top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
-  //   bottom: -0.3em;
-  //   left: 10em;
-  //   right: 10em;
-  // }
+    // &::before {
+      //   top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
+      //   bottom: -0.3em;
+      //   left: 10em;
+      //   right: 10em;
+      // }
 
-  // &::after{
-  //   left: -0.3em;
-  //   right: -0.3em;
-  //   top: 10em;
-  //   bottom: 10em;
-  // }
+      // &::after{
+        //   left: -0.3em;
+        //   right: -0.3em;
+        //   top: 10em;
+        //   bottom: 10em;
+        // }
 }
 
 // splits the page in half
@@ -81,6 +99,16 @@ h4 {
   overflow-x: hidden;
   padding: 20px;
   position: relative;
+  @media only screen and (max-width: 800px) {
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding: 20px;
+    position: relative;
+  }
 }
 
 
@@ -91,7 +119,12 @@ h4 {
   background-color: white;
   padding-left: 2%;
   padding-right: 5%;
-
+  @media only screen and (max-width: 800px) {
+    top: 0;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 5%;
+  }
 }
 
 
@@ -133,7 +166,11 @@ h4 {
   left: 5%;
   top: 5%;
   width: 8%;
+  @media only screen and (min-width: 80rem) {
+    display: none;
+  }
 }
+
 
 
 .hidden {
@@ -166,6 +203,14 @@ h4 {
   padding: 25%;
   position: absolute;
   z-index: 0;
+  @media only screen and (max-width: 800px) {
+    bottom: 0;
+    top: 50%;
+    background-color: black;
+    padding: 25%;
+    position: absolute;
+    overflow: auto;
+  }
 }
 
 // .content-right {
@@ -193,6 +238,14 @@ h4 {
   width: 75%;
   color: white;
   z-index: 1;
+  @media only screen and (max-width: 800px) {
+    position: relative;
+    overflow-block: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    right: 22%;
+    width: 150%;
+  }
 }
 
 #about ul{
