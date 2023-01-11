@@ -151,6 +151,9 @@ h4 {
 .list-container {
   margin-top: 20%;
   margin-left: 15%;
+  @media only screen and (max-width: 800px) {
+    margin-top: 5%;
+  }
 }
 
 #labels-list li {
