@@ -124,6 +124,7 @@ h4 {
     background-color: white;
     padding-left: 2%;
     padding-right: 5%;
+    height: 40%;
   }
 }
 
@@ -217,12 +218,13 @@ h4 {
   position: absolute;
   z-index: 0;
   @media only screen and (max-width: 800px) {
-    bottom: 0;
-    top: 50%;
+    top: 40%;
     background-color: black;
     padding: 25%;
     position: absolute;
     overflow: auto;
+    height: 60%;
+    z-index: 2;
   }
 }
 
