@@ -2,25 +2,27 @@
 
 // Background image
 
-// body {
-// background-image: url(background-img.jpg);
-// background-repeat:no-repeat;
-// background-position: center;
-// background-size: cover;
-// display: block;
-// min-height: 100%;
-// }
+body {
+  @media only screen and (min-width: 800px) {
+    background-image: url(https://res.cloudinary.com/dmz2vmnno/image/upload/v1674142650/Background-img_1_xve4eh.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 80rem) {
   .hide-on-mobile {
     display: none;
   }
 }
 
-@media only screen and (max-width: 80rem) {
-  .show-on-mobile {
-    display: block;
-  }
-}
+// @media only screen and (max-width: 80rem) {
+//   .show-on-mobile {
+//     display: block;
+//   }
+// }
 
 @media only screen and (max-width: 800px) {
   .show-on-mobile {
@@ -29,13 +31,13 @@
 }
 
 
-.background-img  {
-  position: fixed;
-  z-index: 0;
-  left: 44.03%;
-  bottom: 32%;
-  height: 30%;
-}
+// .background-img  {
+//   position: fixed;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   display: block;
+// }
 
 
 // fonts
@@ -57,9 +59,9 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  position: relative;
+  // display: flex;
+  // flex-direction: row;
+  // position: relative;
   @media only screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
@@ -116,7 +118,6 @@ h4 {
 
 .left {
   left: 0;
-  background-color: white;
   padding-left: 2%;
   padding-right: 5%;
   @media only screen and (max-width: 800px) {
@@ -213,8 +214,7 @@ h4 {
 
 .right {
   right: 0;
-  background-color: black;
-  padding: 25%;
+  padding: 25% 15% 25% 25%;
   position: absolute;
   z-index: 0;
   @media only screen and (max-width: 800px) {
@@ -246,8 +246,8 @@ h4 {
 
 #about {
   position: absolute;
-  bottom: 10%;
-  right: 10%;
+  bottom: 3%;
+  right: 3%;
   padding: 25px;
   text-align: center;
   width: 75%;
@@ -273,6 +273,7 @@ h4 {
   position: relative;
   z-index: 1;
   font-size: 120%;
+  left: 3%;
 }
 
 #about li {
@@ -293,8 +294,8 @@ h4 {
 
 #projects {
   position: absolute;
-  bottom: 35%;
-  right: 35%;
+  bottom: 33%;
+  right: 31%;
   padding: 25px;
   color: white;
 
