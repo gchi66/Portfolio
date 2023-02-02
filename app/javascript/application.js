@@ -3,29 +3,35 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 
-const toggleItem = document.querySelector('#toggleItem');
-const toggleItemOne = document.querySelector('#toggleItemOne');
-const toggleItemTwo = document.querySelector('#toggleItemTwo');
+const toggleAbout = document.querySelector('#toggleAbout');
+const toggleProjects = document.querySelector('#toggleProjects');
+const toggleContact = document.querySelector('#toggleContact');
 const about = document.querySelector('#about');
 const projects = document.querySelector('#projects');
 const contact = document.querySelector('#contact');
 
 
 // Showing the stuff on the right side of the screen when you click the list items
-  toggleItem.addEventListener('click', (event) => {
+
+  // toggleAbout = About on the left side of the screen
+  toggleAbout.addEventListener('click', (event) => {
     event.preventDefault()
+    // just checking if the classname is hidden, not assigning anything
     if(about.className === 'hidden') {
+      // now assigning classnames
       about.className = 'visible';
+      // hide the other two when the first one is visible
       projects.className = 'hidden';
       contact.className = 'hidden';
     }
     else {
+      // assigning hidden when it is clicked and visible
       about.className = 'hidden';
     }
   });
 
-
-    toggleItemOne.addEventListener('click', (event) => {
+  // toggleProjects = projects on the left side of the screen
+    toggleProjects.addEventListener('click', (event) => {
       event.preventDefault()
     if(projects.className === 'hidden') {
       projects.className = 'visible';
@@ -35,8 +41,8 @@ const contact = document.querySelector('#contact');
       projects.className = 'hidden';
     }
   });
-
-  toggleItemTwo.addEventListener('click', (event) => {
+  // toggleContact = contact on the left side of the screen
+  toggleContact.addEventListener('click', (event) => {
     event.preventDefault()
     if(contact.className === 'hidden') {
       contact.className = 'visible';
@@ -50,35 +56,35 @@ const contact = document.querySelector('#contact');
 
   // Fade the li on the left side of the screen in and out
 
-  toggleItem.addEventListener("click", (event) => {
+  toggleAbout.addEventListener("click", (event) => {
     event.preventDefault()
-    if (toggleItem.className === "visible") {
-      toggleItem.className  = "hidden";
-      toggleItemOne.className = "visible"
-      toggleItemTwo.className = "visible"
+    if (toggleAbout.className === "visible") {
+      toggleAbout.className  = "hidden";
+      toggleProjects.className = "visible"
+      toggleContact.className = "visible"
     } else {
-      toggleItem.className = "visible";
+      toggleAbout.className = "visible";
     }
   });
 
-  toggleItemOne.addEventListener("click", (event) => {
+  toggleProjects.addEventListener("click", (event) => {
     event.preventDefault()
-    if (toggleItemOne.className === "visible") {
-      toggleItemOne.className  = "hidden";
-      toggleItem.className = "visible"
-      toggleItemTwo.className = "visible"
+    if (toggleProjects.className === "visible") {
+      toggleProjects.className  = "hidden";
+      toggleAbout.className = "visible"
+      toggleContact.className = "visible"
     } else {
-      toggleItemOne.className = "visible";
+      toggleProjects.className = "visible";
     }
   });
 
-  toggleItemTwo.addEventListener("click", (event) => {
+  toggleContact.addEventListener("click", (event) => {
     event.preventDefault()
-    if (toggleItemTwo.className === "visible") {
-      toggleItemTwo.className  = "hidden";
-      toggleItem.className = "visible"
-      toggleItemOne.className = "visible"
+    if (toggleContact.className === "visible") {
+      toggleContact.className  = "hidden";
+      toggleAbout.className = "visible"
+      toggleProjects.className = "visible"
     } else {
-      toggleItemTwo.className = "visible";
+      toggleContact.className = "visible";
     }
   });
